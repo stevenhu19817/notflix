@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+
+/* 基本設置 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* 背景設置 */
+.background {
+    background-image: url('../images/notflix_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 內容區域 */
+.content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* 標誌 */
+.logo {
+    padding: 20px 0 0 143px;
+}
+
+.logo img {
+    width: 217.1px;
+    height: 58.5px;
+}
+
+/* 登入容器 */
+.login-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 60px 68px 61px;
+    width: 314px;
+    min-width: 314px;
+    color: white;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* 標題 */
+h1 {
+    margin: 0 0 28px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* 表單 */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 輸入框容器 */
+.input-container {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 24px 20px 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    background-color: rgba(21, 21, 21, 0.6);
+    color: white;
+    height: 55px;
+}
+
+.input-container label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.input-container input:focus+label,
+.input-container input:not(:placeholder-shown)+label {
+    top: 8px;
+    font-size: 11px;
+    transform: translateY(0);
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.input-container input::placeholder {
+    color: transparent;
+}
+
+/* 按鈕 */
+button[type="submit"],
+.login-code-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    height: 40px;
+}
+
+button[type="submit"] {
+    background-color: #e50914;
+}
+
+.login-code-btn {
+    background-color: rgba(121, 121, 121, 0.4);
+}
+
+/* 分隔線和忘記密碼 */
+.or-divider,
+.forgot-password {
+    text-align: center;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.or-divider {
+    color: #777;
+}
+
+/* 表單選項 */
+.form-options {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #b3b3b3;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+}
+
+.form-options input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.3s;
+    position: relative;
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.form-options input[type="checkbox"]:checked {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.form-options input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 12px;
+}
+
+/* 註冊連結 */
+.signup-link {
+    margin-top: 16px;
+    font-size: 16px;
+    color: #737373;
+}
+
+.signup-link p {
+    color: #8c8c8c;
+}
+
+/* 連結樣式 */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* reCAPTCHA 條款 */
+.recaptcha-terms {
+    font-size: 13px;
+    color: #8c8c8c;
+    margin-top: 11px;
+}
+
+.recaptcha-terms a {
+    color: #0071eb;
+}

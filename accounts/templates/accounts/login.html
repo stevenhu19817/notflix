@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notflix Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+    <div class="background">
+        <div class="content">
+            <div class="logo">
+                <a href="{% url 'core:home' %}">
+                    <img src="{% static 'images/notflix-logo.svg' %}" alt="Notflix">
+                </a>
+            </div>
+            <div class="login-container-wrapper">
+                <div class="login-container">
+                    <h1>登入</h1>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="input-container">
+                            <input type="text" name="username" required placeholder=" ">
+                            <label for="username">電子郵件地址或手機號碼</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" name="password" required placeholder=" ">
+                            <label for="password">密碼</label>
+                        </div>
+                        <button type="submit">登入</button>
+                    </form>
+                    <div class="or-divider">或</div>
+                    <button class="login-code-btn">使用登入碼</button>
+                    <div class="forgot-password">
+                        <a href="#">忘記密碼?</a>
+                    </div>
+                    <div class="form-options">
+                        <label>
+                            <input type="checkbox" name="remember_me"> 記住我
+                        </label>
+                    </div>
+                    <div class="signup-link">
+                        <p>尚未加入 Notflix？<a href="#">馬上註冊</a></p>
+                    </div>
+                    <div class="recaptcha-terms">
+                        <p>此頁面受到 Google reCAPTCHA 保護，以確保您不是機器人。<a href="#">瞭解更多</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
