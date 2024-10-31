@@ -73,7 +73,6 @@ This project offers two methods for setup and deployment:
 1. Clone the repository:
    ```
    git clone https://github.com/stevenhu19817/notflix.git
-   cd notflix
    ```
 
 2. Set up environment variables:
